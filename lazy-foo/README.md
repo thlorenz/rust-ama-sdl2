@@ -15,9 +15,13 @@ I recommend to also refer to instructions in the [main readme](../README.md).
 
 ### 02 Image On the Screen
 
+```sh
+cargo run --bin 02_image_on_screen
+```
+
 - [tutorial](https://lazyfoo.net/tutorials/SDL/02_getting_an_image_on_the_screen/index.php)
-- `cargo run --bin 02_image_on_screen`
 - [rust code](./src/02_image_on_screen.rs)
+- [read up on high-dpi-mode](https://nlguillemot.wordpress.com/2016/12/11/high-dpi-rendering/) which is an option when creating the window
 
 
 ## Related Projects
