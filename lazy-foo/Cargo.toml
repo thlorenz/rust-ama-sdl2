@@ -12,3 +12,7 @@ version="0.34.2"
 [[bin]]
 name = "02_image_on_screen"
 path = "src/02_image_on_screen.rs"
+
+[[bin]]
+name = "03_event_driven"
+path = "src/03_event_driven.rs"

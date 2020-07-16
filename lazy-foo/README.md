@@ -23,6 +23,41 @@ cargo run --bin 02_image_on_screen
 - [rust code](./src/02_image_on_screen.rs)
 - [read up on high-dpi-mode](https://nlguillemot.wordpress.com/2016/12/11/high-dpi-rendering/) which is an option when creating the window
 
+### 03 Event Driven Programming
+
+- [tutorial](http://lazyfoo.net/tutorials/SDL/03_event_driven_programming/index.php)
+- [rust code](./src/03_event_driven.rs)
+
+#### Note on the Event Polling Strategy
+
+In the example we're using `event_pump.poll_event` since that is what the
+ original tutorial is using. It returns the most recent event from the SDL event
+  queue.
+ It returns `0` when the queue is empty.
+ Note that the original tutorial called this method in a loop until no more
+  events are on the queue which is actually more akin to `event_poll.iter
+  ` (see below). We don't do this as the game loop causes us to
+   poll events on each iteration and here we're really only interested in the
+    last one.
+
+```rust
+if let Some(Event::Quit { .. }) = event_pump.poll_event() {
+    break 'running;
+}
+```
+
+However, we could have used `event_poll.iter()` as well. It calls
+ `even_pump.poll_event` repeatedly until there are no more events on the queue. This is a better
+ approach in most situations, and we will use it going forward. 
+
+```rust
+for event in event_pump.poll_iter() {
+    match event {
+        Event::Quit { .. } => break 'running,
+        _ => {}
+    }
+}
+```
 
 ## Related Projects
 
