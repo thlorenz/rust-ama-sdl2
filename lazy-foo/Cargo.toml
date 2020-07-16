@@ -16,3 +16,7 @@ path = "src/02_image_on_screen.rs"
 [[bin]]
 name = "03_event_driven"
 path = "src/03_event_driven.rs"
+
+[[bin]]
+name = "04_key_presses"
+path = "src/04_key_presses.rs"

@@ -59,6 +59,15 @@ for event in event_pump.poll_iter() {
 }
 ```
 
+### 04 Key Presses 
+
+- [tutorial](http://lazyfoo.net/tutorials/SDL/04_key_presses/index.php)
+- [rust code](./src/04_key_presses.rs)
+- [SDK keycodes and scancodes](https://wiki.libsdl.org/SDL_Keycode)
+- [alternate approach to query
+  keyboard](https://github.com/Rust-SDL2/rust-sdl2/blob/master/examples/keyboard-state.rs) via
+  `events.keyboard_state().pressed_scancodes()`
+
 ## Related Projects
 
 - [rust-lazy-foo](https://github.com/ysgard/rust-lazy-foo) a bit outdated and incomplete
