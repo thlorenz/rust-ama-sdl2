@@ -1,0 +1,14 @@
+[package]
+name = "lazy-foo"
+version = "0.1.0"
+authors = ["Thorsten Lorenz <thlorenz@gmx.de>"]
+edition = "2018"
+
+[dependencies]
+[dependencies.sdl2]
+features = ["ttf"]
+version="0.34.2"
+
+[[bin]]
+name = "02_image_on_screen"
+path = "src/02_image_on_screen.rs"
