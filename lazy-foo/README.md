@@ -25,6 +25,10 @@ cargo run --bin 02_image_on_screen
 
 ### 03 Event Driven Programming
 
+```sh
+cargo run --bin 03_event_driven
+```
+
 - [tutorial](http://lazyfoo.net/tutorials/SDL/03_event_driven_programming/index.php)
 - [rust code](./src/03_event_driven.rs)
 
@@ -61,6 +65,10 @@ for event in event_pump.poll_iter() {
 
 ### 04 Key Presses
 
+```sh
+cargo run --bin 04_key_presses
+```
+
 - [tutorial](http://lazyfoo.net/tutorials/SDL/04_key_presses/index.php)
 - [rust code](./src/04_key_presses.rs)
 - [SDK keycodes and scancodes](https://wiki.libsdl.org/SDL_Keycode)
@@ -69,6 +77,12 @@ for event in event_pump.poll_iter() {
   `events.keyboard_state().pressed_scancodes()`
 
 #### 05 Optimized Surface Loading and Soft Stretching
+
+Modified to stretch to half screen size to prove that it is actually stretching.
+
+```sh
+cargo run --bin 05_optimized_loading_soft_stretching
+```
 
  - [SDL_CreateTextureFromSurface](https://wiki.libsdl.org/SDL_CreateTextureFromSurface)
  - [SDL_ConvertSurface](https://wiki.libsdl.org/SDL_ConvertSurface)
