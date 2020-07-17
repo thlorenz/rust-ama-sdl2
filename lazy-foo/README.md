@@ -48,7 +48,7 @@ if let Some(Event::Quit { .. }) = event_pump.poll_event() {
 
 However, we could have used `event_poll.iter()` as well. It calls
  `even_pump.poll_event` repeatedly until there are no more events on the queue. This is a better
- approach in most situations, and we will use it going forward. 
+ approach in most situations, and we will use it going forward.
 
 ```rust
 for event in event_pump.poll_iter() {
@@ -59,7 +59,7 @@ for event in event_pump.poll_iter() {
 }
 ```
 
-### 04 Key Presses 
+### 04 Key Presses
 
 - [tutorial](http://lazyfoo.net/tutorials/SDL/04_key_presses/index.php)
 - [rust code](./src/04_key_presses.rs)
@@ -68,9 +68,23 @@ for event in event_pump.poll_iter() {
   keyboard](https://github.com/Rust-SDL2/rust-sdl2/blob/master/examples/keyboard-state.rs) via
   `events.keyboard_state().pressed_scancodes()`
 
+#### 05 Optimized Surface Loading and Soft Stretching
+
+ - [SDL_CreateTextureFromSurface](https://wiki.libsdl.org/SDL_CreateTextureFromSurface)
+ - [SDL_ConvertSurface](https://wiki.libsdl.org/SDL_ConvertSurface)
+ - [SDL_GetWindowPixelFormat](https://wiki.libsdl.org/SDL_GetWindowPixelFormat)
+ - [SDL_PixelFormat](https://wiki.libsdl.org/SDL_PixelFormat)
+ - [SDL_PixelFormatEnum](https://wiki.libsdl.org/SDL_PixelFormatEnum)
+ - [SDL_UpdateWindowSurface](https://wiki.libsdl.org/SDL_UpdateWindowSurface)
+ - [SDL_BlitScaled](https://wiki.libsdl.org/SDL_BlitScaled)
+ - [WindowSurfaceRef::update_window](https://rust-sdl2.github.io/rust-sdl2/sdl2/video/struct.WindowSurfaceRef.html#method.update_window)
+
 ## Related Projects
 
-- [rust-lazy-foo](https://github.com/ysgard/rust-lazy-foo) a bit outdated and incomplete
+- [rust-sdl2-lazyfoo](https://github.com/bombless/rust-sdl2-lazyfoo) from 2015 up to tutorial 18
+- [rust-lazy-foo](https://github.com/ysgard/rust-lazy-foo) from 2016 up to tutorial 18
+- [lazyfoo-rs](https://github.com/dagit/lazyfoo-rs) from 2017 tutorial 39 only
+- [lazyfoo-sdl2-rs](https://github.com/mikeyhc/lazyfoo-sdl2-rs) from 2016 up to tutorial 5
 
 ## LICENSE
 

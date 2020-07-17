@@ -1,12 +1,11 @@
-use std::error::Error;
-
 use sdl2::render::{Texture, TextureCreator, WindowCanvas};
 use sdl2::surface::Surface;
 use sdl2::video::WindowContext;
 use sdl2::Sdl;
+use std::error::Error;
 
-const WIDTH: u32 = 640;
-const HEIGHT: u32 = 480;
+pub const WIDTH: u32 = 640;
+pub const HEIGHT: u32 = 480;
 
 // init method we created in ./02_image_on_screen.rs
 pub fn init_renderer() -> Result<(Sdl, WindowCanvas), Box<dyn Error>> {
