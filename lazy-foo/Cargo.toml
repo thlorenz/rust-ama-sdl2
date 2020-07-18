@@ -6,8 +6,9 @@ edition = "2018"
 
 [dependencies]
 [dependencies.sdl2]
-features = ["ttf"]
 version="0.34.2"
+default-features = false
+features = ["image", "ttf"]
 
 [[bin]]
 name = "02_image_on_screen"
@@ -20,6 +21,11 @@ path = "src/03_event_driven.rs"
 [[bin]]
 name = "04_key_presses"
 path = "src/04_key_presses.rs"
+
 [[bin]]
 name = "05_optimized_loading_soft_stretching"
 path = "src/05_optimized_loading_soft_stretching.rs"
+
+[[bin]]
+name = "06_loading_pngs"
+path = "src/06_loading_pngs.rs"

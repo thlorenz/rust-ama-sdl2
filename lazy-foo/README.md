@@ -93,6 +93,30 @@ cargo run --bin 05_optimized_loading_soft_stretching
  - [SDL_BlitScaled](https://wiki.libsdl.org/SDL_BlitScaled)
  - [WindowSurfaceRef::update_window](https://rust-sdl2.github.io/rust-sdl2/sdl2/video/struct.WindowSurfaceRef.html#method.update_window)
 
+#### 06 Loading PNGs with SDL_image
+
+```sh
+cargo run --bin 06_loading_pngs
+```
+
+Note that I got this warning initially:
+> // libpng warning: iCCP: known incorrect sRGB profile
+
+which was easily fixed via: `convert loaded.png fixed.png` and using the
+ _fixed_ png instead which also turned out to be half the size.
+
+- [tutorials installation
+  instructions](http://lazyfoo.net/tutorials/SDL/06_extension_libraries_and_loading_other_image_formats/index.php)
+  - not needed if you followed the [main readme](../README.md) instructions
+- [tutorial](http://lazyfoo.net/tutorials/SDL/06_extension_libraries_and_loading_other_image_formats/index2.php)
+- [rust-sdl2 load_texture](https://rust-sdl2.github.io/rust-sdl2/sdl2/render
+/struct.TextureCreator.html#method.load_texture)
+- [rust-sdl2 image demo](https://github.com/Rust-SDL2/rust-sdl2/blob/master
+/examples/image-demo.rs)
+- [SDL2_Image docs](https://www.libsdl.org/projects/SDL_image/docs
+/SDL_image_frame.html)
+  - [`SDL_Surface *IMG_Load(const char *file)`](https://www.libsdl.org/projects/SDL_image/docs/SDL_image_frame.html)
+
 ## Related Projects
 
 - [rust-sdl2-lazyfoo](https://github.com/bombless/rust-sdl2-lazyfoo) from 2015 up to tutorial 18
