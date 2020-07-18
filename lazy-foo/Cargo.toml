@@ -41,3 +41,7 @@ path = "src/08_geometry.rs"
 [[bin]]
 name = "09_viewport"
 path = "src/09_viewport.rs"
+
+[[bin]]
+name = "10_color_keying"
+path = "src/10_color_keying.rs"

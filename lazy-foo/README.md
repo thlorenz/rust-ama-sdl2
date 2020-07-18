@@ -154,6 +154,22 @@ libpng warning.
 - [SDL_RenderSetViewport](https://wiki.libsdl.org/SDL_RenderSetViewport)
 - [explanation of libpng incorrect sRGP profile warning](https://stackoverflow.com/a/22747902)
 
+#### 10 Color Keying
+
+```sh
+cargo run --bin 10_color_keying
+```
+
+NOTE: running this example drove CPU usage of _WindowServer_ on macOS up, most likely due to
+applying transparency.
+
+- [tutorial](http://lazyfoo.net/tutorials/SDL/10_color_keying/index.php)
+- [sdl2::image::LoadSurface::from_file](http://rust-sdl2.github.io/rust-sdl2/sdl2/image/trait.LoadSurface.html#tymethod.from_file)
+- [SDL_SetColorKey](https://wiki.libsdl.org/SDL_SetColorKey)
+- [sdl2::Surface::set_color_key](https://docs.rs/sdl2/0.34.2/sdl2/surface/struct.SurfaceRef.html#method.set_color_key)
+- [SDL_MapRGB](https://wiki.libsdl.org/SDL_MapRGB)
+
+
 ## Related Projects
 
 - [rust-sdl2-lazyfoo](https://github.com/bombless/rust-sdl2-lazyfoo) from 2015 up to tutorial 18
