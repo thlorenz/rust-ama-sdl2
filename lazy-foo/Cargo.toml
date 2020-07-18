@@ -29,3 +29,7 @@ path = "src/05_optimized_loading_soft_stretching.rs"
 [[bin]]
 name = "06_loading_pngs"
 path = "src/06_loading_pngs.rs"
+
+[[bin]]
+name = "07_textures"
+path = "src/07_textures.rs"

@@ -117,6 +117,20 @@ which was easily fixed via: `convert loaded.png fixed.png` and using the
 /SDL_image_frame.html)
   - [`SDL_Surface *IMG_Load(const char *file)`](https://www.libsdl.org/projects/SDL_image/docs/SDL_image_frame.html)
 
+#### 07 Texture Loading and Rendering
+
+
+```sh
+cargo run --bin 07_textures
+```
+
+This tutorial is introducing an API which we've been using already as that is what most
+examples are suggesting at this point, at least for rust-sdl2.
+
+- [tutorial](http://lazyfoo.net/tutorials/SDL/07_texture_loading_and_rendering/index.php)
+- [SDL_TEXTURE](https://wiki.libsdl.org/SDL_Texture)
+
+
 ## Related Projects
 
 - [rust-sdl2-lazyfoo](https://github.com/bombless/rust-sdl2-lazyfoo) from 2015 up to tutorial 18
