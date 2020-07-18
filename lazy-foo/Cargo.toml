@@ -37,3 +37,7 @@ path = "src/07_textures.rs"
 [[bin]]
 name = "08_geometry"
 path = "src/08_geometry.rs"
+
+[[bin]]
+name = "09_viewport"
+path = "src/09_viewport.rs"

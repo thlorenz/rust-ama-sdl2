@@ -141,6 +141,19 @@ cargo run --bin 08_geometry
 - [SDL_RenderFillRect](https://wiki.libsdl.org/SDL_RenderFillRect)
 - [SDL_RenderDrawRect](https://wiki.libsdl.org/SDL_RenderDrawRect)
 
+#### 09 The Viewport
+
+```sh
+cargo run --bin 09_viewport
+```
+
+NOTE: needed to fix png here as well via: `convert viewport.png viewport.png` in order to avoid
+libpng warning.
+
+- [tutorial](http://lazyfoo.net/tutorials/SDL/09_the_viewport/index.php)
+- [SDL_RenderSetViewport](https://wiki.libsdl.org/SDL_RenderSetViewport)
+- [explanation of libpng incorrect sRGP profile warning](https://stackoverflow.com/a/22747902)
+
 ## Related Projects
 
 - [rust-sdl2-lazyfoo](https://github.com/bombless/rust-sdl2-lazyfoo) from 2015 up to tutorial 18
