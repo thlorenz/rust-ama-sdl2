@@ -14,6 +14,7 @@ pub fn init_renderer() -> Result<(Sdl, WindowCanvas), Box<dyn Error>> {
 
     let window = video
         .window("SDL Tutorial", WIDTH, HEIGHT)
+        // .position(-600, 0)
         .position_centered()
         .build()?;
 

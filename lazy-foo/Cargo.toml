@@ -33,3 +33,7 @@ path = "src/06_loading_pngs.rs"
 [[bin]]
 name = "07_textures"
 path = "src/07_textures.rs"
+
+[[bin]]
+name = "08_geometry"
+path = "src/08_geometry.rs"

@@ -119,7 +119,6 @@ which was easily fixed via: `convert loaded.png fixed.png` and using the
 
 #### 07 Texture Loading and Rendering
 
-
 ```sh
 cargo run --bin 07_textures
 ```
@@ -130,6 +129,17 @@ examples are suggesting at this point, at least for rust-sdl2.
 - [tutorial](http://lazyfoo.net/tutorials/SDL/07_texture_loading_and_rendering/index.php)
 - [SDL_TEXTURE](https://wiki.libsdl.org/SDL_Texture)
 
+#### 08 Geometry Rendering
+
+```sh
+cargo run --bin 08_geometry
+```
+
+- [tutorial](http://lazyfoo.net/tutorials/SDL/08_geometry_rendering/index.php)
+- [SDL2 Rendering API](https://wiki.libsdl.org/CategoryRender)
+- [SDL_RECT](https://wiki.libsdl.org/SDL_Rect)
+- [SDL_RenderFillRect](https://wiki.libsdl.org/SDL_RenderFillRect)
+- [SDL_RenderDrawRect](https://wiki.libsdl.org/SDL_RenderDrawRect)
 
 ## Related Projects
 
