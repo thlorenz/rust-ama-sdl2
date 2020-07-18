@@ -184,6 +184,18 @@ cargo run --bin 11_clip_rendering
 - [lazyfoo-rs](https://github.com/dagit/lazyfoo-rs) from 2017 tutorial 39 only
 - [lazyfoo-sdl2-rs](https://github.com/mikeyhc/lazyfoo-sdl2-rs) from 2016 up to tutorial 5
 
+#### 12 Color Modulation
+
+```sh
+cargo run --bin 12_color_modulation
+```
+
+Way to multiply a color throughout the whole texture.
+For `RGB(255, 128, 255)` it halves the green component for any pixel on the texture.
+
+- [tutorial](http://lazyfoo.net/tutorials/SDL/12_color_modulation/index.php)
+- [SDL_SetTextureColorMod](https://wiki.libsdl.org/SDL_SetTextureColorMod)
+
 ## LICENSE
 
 GPL2

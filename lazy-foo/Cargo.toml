@@ -49,3 +49,7 @@ path = "src/10_color_keying.rs"
 [[bin]]
 name = "11_clip_rendering"
 path = "src/11_clip_rendering.rs"
+
+[[bin]]
+name = "12_color_modulation"
+path = "src/12_color_modulation.rs"
