@@ -169,6 +169,13 @@ applying transparency.
 - [sdl2::Surface::set_color_key](https://docs.rs/sdl2/0.34.2/sdl2/surface/struct.SurfaceRef.html#method.set_color_key)
 - [SDL_MapRGB](https://wiki.libsdl.org/SDL_MapRGB)
 
+#### 11 Clip Rendering and Sprite Sheets
+
+```sh
+cargo run --bin 11_clip_rendering
+```
+
+- [tutorial](http://lazyfoo.net/tutorials/SDL/11_clip_rendering_and_sprite_sheets/index.php)
 
 ## Related Projects
 

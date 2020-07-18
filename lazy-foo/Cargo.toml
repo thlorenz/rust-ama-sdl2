@@ -45,3 +45,7 @@ path = "src/09_viewport.rs"
 [[bin]]
 name = "10_color_keying"
 path = "src/10_color_keying.rs"
+
+[[bin]]
+name = "11_clip_rendering"
+path = "src/11_clip_rendering.rs"
