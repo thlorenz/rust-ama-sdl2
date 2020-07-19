@@ -18,7 +18,7 @@ pub fn init_renderer() -> Result<(Sdl, WindowCanvas), Box<dyn Error>> {
         .position_centered()
         .build()?;
 
-    let canvas = window.into_canvas().build()?;
+    let canvas = window.into_canvas().accelerated().present_vsync().build()?;
 
     Ok((sdl_context, canvas))
 }

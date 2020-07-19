@@ -57,3 +57,7 @@ path = "src/12_color_modulation.rs"
 [[bin]]
 name = "13_alpha_blending"
 path = "src/13_alpha_blending.rs"
+
+[[bin]]
+name = "14_animated_sprites"
+path = "src/14_animated_sprites.rs"

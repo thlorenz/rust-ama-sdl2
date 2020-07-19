@@ -209,10 +209,10 @@ cargo run --bin 13_alpha_blending
 #### 14 Animated Sprites and VSync
 
 ```sh
-cargo run --bin 14_animating_sprites
+cargo run --bin 14_animated_sprites
 ```
 
-- [tutorial](http://lazyfoo.net/tutorials/SDL/12_color_modulation/index.php)
+- [tutorial](http://lazyfoo.net/tutorials/SDL/14_animated_sprites_and_vsync/index.php)
 
 
 ## LICENSE
