@@ -1,6 +1,6 @@
 use sdl2::image::LoadSurface;
 use sdl2::pixels::Color;
-use sdl2::rect::Rect;
+use sdl2::rect::{Point, Rect};
 use sdl2::render::{BlendMode, Texture, TextureCreator, WindowCanvas};
 use sdl2::surface::Surface;
 use sdl2::video::WindowContext;
@@ -79,21 +79,58 @@ impl<'a> Sprite<'a> {
         self.texture.set_color_mod(r, g, b);
     }
 
-    pub fn render(
+    pub fn render<R2>(
         &self,
         canvas: &mut WindowCanvas,
         x: i32,
         y: i32,
-        clip: Option<&Rect>,
-    ) -> Result<(), String> {
-        match clip {
+        clip: R2,
+    ) -> Result<(), String>
+    where
+        R2: Into<Option<Rect>>,
+    {
+        self.render_ex(canvas, x, y, clip, 0.0, None, false, false)
+    }
+
+    pub fn render_ex<R2, P>(
+        &self,
+        canvas: &mut WindowCanvas,
+        x: i32,
+        y: i32,
+        clip: R2,
+        angle: f64,
+        center: P,
+        flip_horizontal: bool,
+        flip_vertical: bool,
+    ) -> Result<(), String>
+    where
+        R2: Into<Option<Rect>>,
+        P: Into<Option<Point>>,
+    {
+        match clip.into() {
             None => {
                 let rect = Rect::new(x, y, self.width, self.height);
-                canvas.copy(&self.texture, None, rect)
+                canvas.copy_ex(
+                    &self.texture,
+                    None,
+                    rect,
+                    angle,
+                    center,
+                    flip_horizontal,
+                    flip_vertical,
+                )
             }
             Some(clip) => {
                 let rect = Rect::new(x, y, clip.width(), clip.height());
-                canvas.copy(&self.texture, *clip, rect)
+                canvas.copy_ex(
+                    &self.texture,
+                    clip,
+                    rect,
+                    angle,
+                    center,
+                    flip_horizontal,
+                    flip_vertical,
+                )
             }
         }
     }
