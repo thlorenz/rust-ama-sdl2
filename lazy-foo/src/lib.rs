@@ -1,8 +1,12 @@
-use sdl2::render::{Texture, TextureCreator, WindowCanvas};
+use sdl2::image::LoadSurface;
+use sdl2::pixels::Color;
+use sdl2::rect::Rect;
+use sdl2::render::{BlendMode, Texture, TextureCreator, WindowCanvas};
 use sdl2::surface::Surface;
 use sdl2::video::WindowContext;
 use sdl2::Sdl;
 use std::error::Error;
+use std::path::Path;
 
 pub const WIDTH: u32 = 640;
 pub const HEIGHT: u32 = 480;
@@ -31,4 +35,66 @@ pub fn load_media<'a>(
     let surface = Surface::load_bmp(path)?;
     let texture = texture_creator.create_texture_from_surface(surface)?;
     Ok(texture)
+}
+
+// Combination of what we built during tutorials 11-14
+pub struct Sprite<'a> {
+    texture: Texture<'a>,
+    width: u32,
+    height: u32,
+}
+
+impl<'a> Sprite<'a> {
+    pub fn new(
+        image_path: &Path,
+        texture_creator: &'a TextureCreator<WindowContext>,
+    ) -> Result<Self, Box<dyn Error>> {
+        let mut surface = Surface::from_file(image_path).expect(&format!(
+            "FATAL: unable to load surface from file {:?}",
+            image_path
+        ));
+
+        surface.set_color_key(true, Color::RGB(0, 0xff, 0xff))?;
+
+        let width = surface.width();
+        let height = surface.height();
+        let texture = texture_creator.create_texture_from_surface(surface)?;
+
+        Ok(Sprite {
+            texture,
+            width,
+            height,
+        })
+    }
+
+    pub fn set_alpha(&mut self, alpha: u8) {
+        self.texture.set_alpha_mod(alpha)
+    }
+
+    pub fn set_blend_mode(&mut self, blend_mode: BlendMode) {
+        self.texture.set_blend_mode(blend_mode)
+    }
+
+    pub fn set_color(&mut self, r: u8, g: u8, b: u8) {
+        self.texture.set_color_mod(r, g, b);
+    }
+
+    pub fn render(
+        &self,
+        canvas: &mut WindowCanvas,
+        x: i32,
+        y: i32,
+        clip: Option<&Rect>,
+    ) -> Result<(), String> {
+        match clip {
+            None => {
+                let rect = Rect::new(x, y, self.width, self.height);
+                canvas.copy(&self.texture, None, rect)
+            }
+            Some(clip) => {
+                let rect = Rect::new(x, y, clip.width(), clip.height());
+                canvas.copy(&self.texture, *clip, rect)
+            }
+        }
+    }
 }
