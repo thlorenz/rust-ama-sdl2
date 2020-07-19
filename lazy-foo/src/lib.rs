@@ -37,6 +37,12 @@ pub fn load_media<'a>(
     Ok(texture)
 }
 
+pub enum Flip {
+    None,
+    Horizontal,
+    Vertical,
+}
+
 // Combination of what we built during tutorials 11-14
 pub struct Sprite<'a> {
     texture: Texture<'a>,
@@ -67,6 +73,13 @@ impl<'a> Sprite<'a> {
         })
     }
 
+    pub fn width(&self) -> u32 {
+        self.width
+    }
+    pub fn height(&self) -> u32 {
+        self.height
+    }
+
     pub fn set_alpha(&mut self, alpha: u8) {
         self.texture.set_alpha_mod(alpha)
     }
@@ -89,7 +102,7 @@ impl<'a> Sprite<'a> {
     where
         R2: Into<Option<Rect>>,
     {
-        self.render_ex(canvas, x, y, clip, 0.0, None, false, false)
+        self.render_ex(canvas, x, y, clip, 0.0, None, &Flip::None)
     }
 
     pub fn render_ex<R2, P>(
@@ -100,13 +113,17 @@ impl<'a> Sprite<'a> {
         clip: R2,
         angle: f64,
         center: P,
-        flip_horizontal: bool,
-        flip_vertical: bool,
+        flip: &Flip,
     ) -> Result<(), String>
     where
         R2: Into<Option<Rect>>,
         P: Into<Option<Point>>,
     {
+        let (flip_horizontal, flip_vertical) = match flip {
+            Flip::None => (false, false),
+            Flip::Horizontal => (true, false),
+            Flip::Vertical => (false, true),
+        };
         match clip.into() {
             None => {
                 let rect = Rect::new(x, y, self.width, self.height);

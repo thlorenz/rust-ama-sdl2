@@ -61,3 +61,7 @@ path = "src/13_alpha_blending.rs"
 [[bin]]
 name = "14_animated_sprites"
 path = "src/14_animated_sprites.rs"
+
+[[bin]]
+name = "15_rotation_flipping"
+path = "src/15_rotation_flipping.rs"

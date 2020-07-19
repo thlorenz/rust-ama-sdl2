@@ -214,6 +214,13 @@ cargo run --bin 14_animated_sprites
 
 - [tutorial](http://lazyfoo.net/tutorials/SDL/14_animated_sprites_and_vsync/index.php)
 
+#### 15 Rotation And Flippgin
+
+```sh
+cargo run --bin 15_rotation_flipping
+```
+
+- [tutorial](http://lazyfoo.net/tutorials/SDL/15_rotation_and_flipping/index.php)
 
 ## LICENSE
 
