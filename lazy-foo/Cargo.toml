@@ -53,3 +53,7 @@ path = "src/11_clip_rendering.rs"
 [[bin]]
 name = "12_color_modulation"
 path = "src/12_color_modulation.rs"
+
+[[bin]]
+name = "13_alpha_blending"
+path = "src/13_alpha_blending.rs"

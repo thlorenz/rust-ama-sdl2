@@ -196,6 +196,25 @@ For `RGB(255, 128, 255)` it halves the green component for any pixel on the text
 - [tutorial](http://lazyfoo.net/tutorials/SDL/12_color_modulation/index.php)
 - [SDL_SetTextureColorMod](https://wiki.libsdl.org/SDL_SetTextureColorMod)
 
+#### 13 Alpha Blending
+
+```sh
+cargo run --bin 13_alpha_blending
+```
+
+- [tutorial](http://lazyfoo.net/tutorials/SDL/13_alpha_blending/index.php)
+- [SDL_BlendMode](https://wiki.libsdl.org/SDL_BlendMode)
+- [Blend Modes](https://en.wikipedia.org/wiki/Blend_modes)
+
+#### 14 Animated Sprites and VSync
+
+```sh
+cargo run --bin 14_animating_sprites
+```
+
+- [tutorial](http://lazyfoo.net/tutorials/SDL/12_color_modulation/index.php)
+
+
 ## LICENSE
 
 GPL2
