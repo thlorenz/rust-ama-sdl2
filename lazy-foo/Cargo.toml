@@ -65,3 +65,7 @@ path = "src/14_animated_sprites.rs"
 [[bin]]
 name = "15_rotation_flipping"
 path = "src/15_rotation_flipping.rs"
+
+[[bin]]
+name = "16_true_type_fonts"
+path = "src/16_true_type_fonts.rs"

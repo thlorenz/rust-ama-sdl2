@@ -14,7 +14,7 @@ fn run(sdl_context: &Sdl, canvas: &mut WindowCanvas) -> Result<(), Box<dyn Error
         .expect("FATAL: failed to init event_pump");
 
     let texture_creator = canvas.texture_creator();
-    let sprite = Sprite::new(
+    let sprite = Sprite::load_from_file(
         "assets/15_rotation_flipping/arrow.png".as_ref(),
         &texture_creator,
     )?;

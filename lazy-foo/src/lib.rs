@@ -3,6 +3,7 @@ use sdl2::pixels::Color;
 use sdl2::rect::{Point, Rect};
 use sdl2::render::{BlendMode, Texture, TextureCreator, WindowCanvas};
 use sdl2::surface::Surface;
+use sdl2::ttf::Font;
 use sdl2::video::WindowContext;
 use sdl2::Sdl;
 use std::error::Error;
@@ -51,17 +52,10 @@ pub struct Sprite<'a> {
 }
 
 impl<'a> Sprite<'a> {
-    pub fn new(
-        image_path: &Path,
+    pub fn from_surface(
+        surface: Surface,
         texture_creator: &'a TextureCreator<WindowContext>,
     ) -> Result<Self, Box<dyn Error>> {
-        let mut surface = Surface::from_file(image_path).expect(&format!(
-            "FATAL: unable to load surface from file {:?}",
-            image_path
-        ));
-
-        surface.set_color_key(true, Color::RGB(0, 0xff, 0xff))?;
-
         let width = surface.width();
         let height = surface.height();
         let texture = texture_creator.create_texture_from_surface(surface)?;
@@ -71,6 +65,29 @@ impl<'a> Sprite<'a> {
             width,
             height,
         })
+    }
+
+    pub fn load_from_file(
+        image_path: &Path,
+        texture_creator: &'a TextureCreator<WindowContext>,
+    ) -> Result<Self, Box<dyn Error>> {
+        let mut surface = Surface::from_file(image_path).expect(&format!(
+            "FATAL: unable to load surface from file {:?}",
+            image_path
+        ));
+
+        surface.set_color_key(true, Color::RGB(0, 0xff, 0xff))?;
+        Sprite::from_surface(surface, texture_creator)
+    }
+
+    pub fn load_from_rendered_text(
+        text: &str,
+        color: Color,
+        font: &Font,
+        texture_creator: &'a TextureCreator<WindowContext>,
+    ) -> Result<Self, Box<dyn Error>> {
+        let surface = font.render(text).solid(color)?;
+        Sprite::from_surface(surface, texture_creator)
     }
 
     pub fn width(&self) -> u32 {

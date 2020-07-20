@@ -222,6 +222,16 @@ cargo run --bin 15_rotation_flipping
 
 - [tutorial](http://lazyfoo.net/tutorials/SDL/15_rotation_and_flipping/index.php)
 
+
+#### 16 True Type Fonts
+
+```sh
+cargo run --bin 16_true_type_fonts
+```
+
+- [tutorial](http://lazyfoo.net/tutorials/SDL/16_true_type_fonts/index.php)
+- [TTF_RENDER_SOLID](https://www.libsdl.org/projects/SDL_ttf/docs/SDL_ttf_43.html)
+
 ## LICENSE
 
 GPL2
