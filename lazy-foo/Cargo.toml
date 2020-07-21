@@ -73,3 +73,7 @@ path = "src/16_true_type_fonts.rs"
 [[bin]]
 name = "17_mouse_events"
 path = "src/17_mouse_events.rs"
+
+[[bin]]
+name = "18_key_states"
+path = "src/18_key_states.rs"

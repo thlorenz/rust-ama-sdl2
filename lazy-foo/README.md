@@ -239,6 +239,21 @@ rust-sdl2 repo.
 - [SDL_GetMouseState](https://wiki.libsdl.org/SDL_GetMouseState)
 - [rust-sdl2 mouse state example](https://github.com/Rust-SDL2/rust-sdl2/blob/master/examples/mouse-state.rs)
 
+
+#### 18 Key States
+
+```sh
+cargo run --bin 18_key_states
+```
+
+Note that I got a bit tired visualizing everything by switching images and changed the example
+to log key states instead.
+
+- [tutorial](https://lazyfoo.net/tutorials/SDL/18_key_states/index.php)
+- [SDL_GetKeyboardState](https://wiki.libsdl.org/SDL_GetKeyboardState)
+- [rust-sdl2 keyboard state
+  example](https://github.com/Rust-SDL2/rust-sdl2/blob/master/examples/keyboard-state.rs)
+
 ## Related Projects
 
 - [rust-sdl2-lazyfoo](https://github.com/bombless/rust-sdl2-lazyfoo) from 2015 up to tutorial 18
