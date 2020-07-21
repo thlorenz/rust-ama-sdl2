@@ -177,13 +177,6 @@ cargo run --bin 11_clip_rendering
 
 - [tutorial](http://lazyfoo.net/tutorials/SDL/11_clip_rendering_and_sprite_sheets/index.php)
 
-## Related Projects
-
-- [rust-sdl2-lazyfoo](https://github.com/bombless/rust-sdl2-lazyfoo) from 2015 up to tutorial 18
-- [rust-lazy-foo](https://github.com/ysgard/rust-lazy-foo) from 2016 up to tutorial 18
-- [lazyfoo-rs](https://github.com/dagit/lazyfoo-rs) from 2017 tutorial 39 only
-- [lazyfoo-sdl2-rs](https://github.com/mikeyhc/lazyfoo-sdl2-rs) from 2016 up to tutorial 5
-
 #### 12 Color Modulation
 
 ```sh
@@ -231,6 +224,28 @@ cargo run --bin 16_true_type_fonts
 
 - [tutorial](http://lazyfoo.net/tutorials/SDL/16_true_type_fonts/index.php)
 - [TTF_RENDER_SOLID](https://www.libsdl.org/projects/SDL_ttf/docs/SDL_ttf_43.html)
+
+#### 17 Mouse Events
+
+```sh
+cargo run --bin 17_mouse_events
+```
+
+Note: I found MouseEvents to work very unreliably on macOS using a Magic Trackpad.
+For that reason I included logging related to button presses taken from an example in the
+rust-sdl2 repo.
+
+- [tutorial](https://lazyfoo.net/tutorials/SDL/17_mouse_events/index.php)
+- [SDL_GetMouseState](https://wiki.libsdl.org/SDL_GetMouseState)
+- [rust-sdl2 mouse state example](https://github.com/Rust-SDL2/rust-sdl2/blob/master/examples/mouse-state.rs)
+
+## Related Projects
+
+- [rust-sdl2-lazyfoo](https://github.com/bombless/rust-sdl2-lazyfoo) from 2015 up to tutorial 18
+- [rust-lazy-foo](https://github.com/ysgard/rust-lazy-foo) from 2016 up to tutorial 18
+- [lazyfoo-rs](https://github.com/dagit/lazyfoo-rs) from 2017 tutorial 39 only
+- [lazyfoo-sdl2-rs](https://github.com/mikeyhc/lazyfoo-sdl2-rs) from 2016 up to tutorial 5
+
 
 ## LICENSE
 
