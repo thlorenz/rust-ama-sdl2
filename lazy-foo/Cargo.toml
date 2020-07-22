@@ -77,3 +77,7 @@ path = "src/17_mouse_events.rs"
 [[bin]]
 name = "18_key_states"
 path = "src/18_key_states.rs"
+
+[[bin]]
+name = "21_sound_effects_and_music"
+path = "src/21_sound_effects_and_music.rs"

@@ -254,6 +254,42 @@ to log key states instead.
 - [rust-sdl2 keyboard state
   example](https://github.com/Rust-SDL2/rust-sdl2/blob/master/examples/keyboard-state.rs)
 
+#### 19 Gamepads and Joysticks
+
+SKIPPED since I don't have either.
+
+- [tutorial](https://lazyfoo.net/tutorials/SDL/19_gamepads_and_joysticks/index.php)
+- [rust-sdk2 gamepad
+  example](https://github.com/Rust-SDL2/rust-sdl2/blob/master/examples/game-controller.rs)
+- [rust-sdl2 joystick
+  example](https://github.com/Rust-SDL2/rust-sdl2/blob/master/examples/joystick.rs)
+
+#### 20 Force Feedback
+
+SKIPPED since I don't have a controller.
+
+- [tutorial](https://lazyfoo.net/tutorials/SDL/20_force_feedback/index.php)
+- [rust-sdl2 haptic
+  example](https://github.com/Rust-SDL2/rust-sdl2/blob/master/examples/haptic.rs)
+
+#### 21 Sound Effects and Music
+
+```sh
+cargo run --bin 21_sound_effects_and_music
+```
+
+Note that this tutorial isn't implemented as in the original. Each sound file (1-5) can only be
+played once and cannot be paused nor does it loop.
+It could be that this needs to be achieved via
+[mixer](https://github.com/Rust-SDL2/rust-sdl2/blob/master/examples/mixer-demo.rs) instead.
+
+- [tutorial](https://lazyfoo.net/tutorials/SDL/21_sound_effects_and_music/index.php)
+- [SDL_MIXER Mix_OpenAudio](https://www.libsdl.org/projects/SDL_mixer/docs/SDL_mixer_11.html)
+- [rust-sdl2 audio wav
+  example](https://github.com/Rust-SDL2/rust-sdl2/blob/master/examples/audio-wav.rs)
+- [rust-sdl2 mixer
+  demo](https://github.com/Rust-SDL2/rust-sdl2/blob/master/examples/mixer-demo.rs)
+
 ## Related Projects
 
 - [rust-sdl2-lazyfoo](https://github.com/bombless/rust-sdl2-lazyfoo) from 2015 up to tutorial 18
