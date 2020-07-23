@@ -1,0 +1,15 @@
+[package]
+name = "one-offs"
+version = "0.1.0"
+authors = ["Thorsten Lorenz <thlorenz@gmx.de>"]
+edition = "2018"
+
+[dependencies]
+[dependencies.sdl2]
+version="0.34.2"
+default-features = false
+features = ["image"]
+
+[[bin]]
+name = "draw_to_texture"
+path = "src/draw_to_texture.rs"
